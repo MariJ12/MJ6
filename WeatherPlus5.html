@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://cn5neu.csb.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/vendors_app_embed_sandbox_sandbox-startup.7424373eb.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/vendors_app_embed_sandbox-startup.b754f8b0e.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/default_app_embed_sandbox_sandbox-startup.9bc169785.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/sandbox-startup.e9e0d3246.js.download"></script><link href="https://codesandbox.io/static/js/babel.7.20.13.min.js" rel="prefetch" as="script">
+
+<script src="./WeatherPlus5_files/browserfs.min.js.download" type="text/javascript"></script>
+
+<script>
+  window.process = BrowserFS.BFSRequire('process');
+  window.Buffer = BrowserFS.BFSRequire('buffer').Buffer;
+</script>
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./WeatherPlus5_files/axios.min.js.download"></script>
+    <title>WeatherPlus5</title>
+    <link href="./WeatherPlus5_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./WeatherPlus5_files/css2" rel="stylesheet">
+    <link rel="manifest" href="https://cn5neu.csb.app/manifest.json">
+  <style id="/src/styles.css:-css" type="text/css">body {
+  display: block;
+  max-width: 400px;
+  margin-top: 60px;
+  margin-right: 700px;
+  margin-left: auto;
+}
+p {
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+button {
+  position: relative;
+  display: block;
+  right: -260px;
+  top: -70px;
+  display: block;
+  cursor: pointer;
+  color: rgb(4, 0, 255);
+  background-color: rgb(249, 249, 249);
+  border: 5px solid whitesmoke;
+  border-radius: 30px 30px;
+  transition: all 0.2 ease-in;
+}
+button:hover {
+  border: 5px solid whitesmoke;
+  color: rgb(14, 207, 255);
+}
+.sun {
+  position: relative;
+  top: -190px;
+  right: -490px;
+  font-size: 120px;
+  margin: -100px 0px 0px auto;
+}
+.box {
+  display: block;
+  background: white;
+  width: 700px;
+  padding: 10px;
+  border: 4px;
+  border-radius: 40px;
+  border-width: 4%;
+  box-shadow: 5px 5px 10px 10px rgb(250, 250, 250);
+}
+
+.typeName {
+  display: block;
+  margin: 10px 10px;
+  display: block;
+  border-radius: 5px;
+}
+.magnify {
+  position: relative;
+  display: block;
+  right: -210px;
+  top: -40px;
+  border-radius: 5px;
+  transition: all 1s ease-out;
+}
+.magnify:hover {
+  background-color: white;
+}
+.city {
+  margin: 0px;
+  padding: 0 auto;
+  border: 0 auto;
+}
+.placetemp {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  height: 20px;
+  padding-top: 0 auto;
+  margin: 0 auto;
+}
+.celsus {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: orangered;
+}
+.celsus:hover {
+  color: rgb(14, 247, 255);
+}
+.degrees {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  height: 20px;
+}
+.row {
+  padding: 0 auto;
+  line-height: 35px;
+  max-height: 20px;
+  margin: auto;
+}
+
+.col-sm-1 {
+  position: relative;
+  right: -10px;
+  top: -90px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 0px auto;
+  border-radius: 10px;
+}
+
+.mj {
+  color: grey;
+  text-align: left;
+  font-size: 8px;
+  margin: 0 auto;
+  padding: 10px;
+}
+</style><script charset="utf-8" src="./WeatherPlus5_files/0.2455d7681.chunk.js.download"></script><script charset="utf-8" src="./WeatherPlus5_files/3.09a963795.chunk.js.download"></script><script charset="utf-8" src="./WeatherPlus5_files/7.916d1bd34.chunk.js.download"></script></head>
+
+  <body cz-shortcut-listen="true"><div class="box">
+    <form class="city">
+      <input type="text" class="typeName" id="type-city" placeholder="Type your city" autofocus="on">
+      <input type="submit" class="magnify" id="search" value="🔎">
+    </form>
+    <button>Current Temp</button>
+    <span class="placetemp" id="replace">
+      Brazil - São Paulo </span><br>
+      <span class="degrees"> 28°</span>
+        <span class="celsus"> 
+          <a href="https://cn5neu.csb.app/" id="ce"> C </a>  </span>
+          <p>Sunday 15:6</p>
+          <hr>
+      <p class="sun">☀️</p>
+    <div class="weekdays">
+      <div class="row">
+        <div class="col-sm-1">
+          <strong> Sat</strong> <br>
+          ☀️<br>
+          <strong>34°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Sun </strong> <br>
+          ☀️<br>
+          <strong>36°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Mon</strong> <br>
+          ☀️<br>
+          <strong>38°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Tue</strong> <br>
+          🌦️<br>
+          <strong>27°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Wed</strong> <br>
+          🌥️<br>
+          <strong>23°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Thu</strong> <br>
+          🌤️<br>
+          <strong>25°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Fri </strong> <br>
+          ☀️<br>
+          <strong>28°</strong>
+        </div>
+      </div>
+    </div>
+    <p class="mj"><em>Coded by Mariana Jennings</em></p>
+  </div>
+  <link href="https://cn5neu.csb.app/src/styles.css">
+  <script src="./WeatherPlus5_files/index.js.download"></script>
+  <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/vendors_app_codemirror-editor_monaco-editor_sandbox.ad4e6d3c4.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/common-sandbox.d3049e87f.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/vendors_app_sandbox.aca52037e.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/vendors_sandbox.3bd3135bd.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/default_app_embed_sandbox.a5ccb2910.chunk.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/sandbox.ee921c4dc.js.download"></script>
+    <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/banner.0b5d84a2b.js.download"></script>
+  <script>
+window.__SANDBOX_DATA__ = {
+  data: {"transpiledModules":{"/package.json:":{"query":"","module":{"path":"/package.json","code":"{\n  \"name\": \"marianas-project-weatherapp\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.html\",\n  \"scripts\": {\n    \"start\": \"parcel index.html --open\",\n    \"build\": \"parcel build index.html\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@babel/core\": \"7.2.0\",\n    \"parcel-bundler\": \"^1.6.1\"\n  },\n  \"keywords\": []\n}"},"isEntry":false,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/src/index.js:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/package.json","compiledCode":"\n      module.exports = JSON.parse(\"{\\n  \\\"name\\\": \\\"marianas-project-weatherapp\\\",\\n  \\\"version\\\": \\\"1.0.0\\\",\\n  \\\"description\\\": \\\"\\\",\\n  \\\"main\\\": \\\"index.html\\\",\\n  \\\"scripts\\\": {\\n    \\\"start\\\": \\\"parcel index.html --open\\\",\\n    \\\"build\\\": \\\"parcel build index.html\\\"\\n  },\\n  \\\"dependencies\\\": {},\\n  \\\"devDependencies\\\": {\\n    \\\"@babel/core\\\": \\\"7.2.0\\\",\\n    \\\"parcel-bundler\\\": \\\"^1.6.1\\\"\\n  },\\n  \\\"keywords\\\": []\\n}\")\n    ","sourceEqualsCompiled":false}},"/index.html:":{"query":"","module":{"path":"/index.html","code":"\u003c!DOCTYPE html>\n\u003chtml lang=\"en\">\n  \u003chead>\n    \u003cmeta charset=\"UTF-8\" />\n    \u003cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n    \u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    \u003cscript src=\"https://unpkg.com/axios@1.1.2/dist/axios.min.js\">\u003c/script>\n    \u003ctitle>WeatherPlus5\u003c/title>\n    \u003clink\n      href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\"\n      rel=\"stylesheet\"\n      integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\"\n      crossorigin=\"anonymous\"\n    />\n    \u003clink rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    \u003clink rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin />\n    \u003clink\n      href=\"https://fonts.googleapis.com/css2?family=Montserrat&display=swap\"\n      rel=\"stylesheet\"\n    />\n  \u003c/head>\n\n  \u003cdiv class=\"box\">\n    \u003cform class=\"city\" >\n      \u003cinput type=\"text\" class=\"typeName\" id = \"type-city\" placeholder=\"Type your city\" autofocus=\"on\" />\n      \u003cinput type=\"submit\" class=\"magnify\" id=\"search\" value=\"🔎\" />\n    \u003c/form>\n    \u003cbutton>Current Temp\u003c/button>\n    \u003cspan class=\"placetemp\" id=\"replace\">\n      Brazil - São Paulo \u003c/span>\u003cbr />\n      \u003cspan class=\"degrees\"> 28°\u003c/span>\n        \u003cspan class=\"celsus\"> \n          \u003ca href=\"\"  id =\"ce\"> C \u003c/a>  \u003c/span>\n          \u003cp>Friday 24/02/2023\u003c/p>\n          \u003chr/>\n      \u003cp class=\"sun\">☀️\u003c/p>\n    \u003cdiv class=\"weekdays\">\n      \u003cdiv class=\"row\">\n        \u003cdiv class=\"col-sm-1\">\n          \u003cstrong> Sat\u003c/strong> \u003cbr />\n          ☀️\u003cbr />\n          \u003cstrong>34°\u003c/strong>\n        \u003c/div>\n        \u003cdiv class=\"col-sm-1\">\n          \u003cstrong> Sun \u003c/strong> \u003cbr />\n          ☀️\u003cbr />\n          \u003cstrong>36°\u003c/strong>\n        \u003c/div>\n        \u003cdiv class=\"col-sm-1\">\n          \u003cstrong> Mon\u003c/strong> \u003cbr />\n          ☀️\u003cbr />\n          \u003cstrong>38°\u003c/strong>\n        \u003c/div>\n        \u003cdiv class=\"col-sm-1\">\n          \u003cstrong> Tue\u003c/strong> \u003cbr />\n          🌦️\u003cbr />\n          \u003cstrong>27°\u003c/strong>\n        \u003c/div>\n        \u003cdiv class=\"col-sm-1\">\n          \u003cstrong> Wed\u003c/strong> \u003cbr />\n          🌥️\u003cbr />\n          \u003cstrong>23°\u003c/strong>\n        \u003c/div>\n        \u003cdiv class=\"col-sm-1\">\n          \u003cstrong> Thu\u003c/strong> \u003cbr />\n          🌤️\u003cbr />\n          \u003cstrong>25°\u003c/strong>\n        \u003c/div>\n        \u003cdiv class=\"col-sm-1\">\n          \u003cstrong> Fri \u003c/strong> \u003cbr />\n          ☀️\u003cbr />\n          \u003cstrong>28°\u003c/strong>\n        \u003c/div>\n      \u003c/div>\n    \u003c/div>\n    \u003cp class=\"mj\">\u003cem>Coded by Mariana Jennings\u003c/em>\u003c/p>\n  \u003c/div>\n  \u003clink href=\"src/styles.css\">\u003c/style>\n  \u003cscript src=\"src/index.js\">\u003c/script>\n\u003c/body>\n\u003c/html>\n","isBinary":false},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":["/src/styles.css:","/src/index.js:"],"initiators":[],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/index.html","compiledCode":"\nfunction loadResources() {\n\trequire(\"./src/styles.css\");\n\n\trequire(\"./src/index.js\");\n\n}\nif (document.readyState !== 'complete') {\n  window.addEventListener('load', function() { loadResources() });\n} else {\n  loadResources();\n}\n\n","sourceEqualsCompiled":false}},"/src/index.js:":{"query":"","module":{"path":"/src/index.js","code":"//Form tempterature\nfunction showFormTemp(response) {\n  let tempNumber = document.querySelector(\".degrees\");\n  let temp = Math.round(response.data.main.temp);\n  tempNumber.innerHTML = `${temp}°`;\n}\n\nfunction enterCity(event) {\n  event.preventDefault();\n  console.log(event);\n  let cityName = document.querySelector(\"#type-city\");\n  let city = document.querySelector(\"#replace\");\n  let apiKey = \"29db418d254189011335f04392e3dfc8\";\n  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName.value}&appid=${apiKey}&units=metric`;\n  city.innerHTML = cityName.value;\n  axios.get(apiUrl).then(showFormTemp);\n}\nlet weekday = [\n  \"Sunday\",\n  \"Monday\",\n  \"Tuesday\",\n  \"Wednesday\",\n  \"Thursday\",\n  \"Friday\",\n  \"Saturday\"\n];\nlet currentTime = new Date();\nlet currentHour = currentTime.getHours();\nlet currentDay = weekday[currentTime.getDay()];\nlet currentMin = currentTime.getMinutes();\nlet textHour = document.querySelector(\"p\");\ntextHour.innerHTML = `${currentDay} ${currentHour}:${currentMin}`;\nlet form = document.querySelector(\".city\");\nform.addEventListener(\"submit\", enterCity);\n\n//button current Location & current Weather\nfunction getTemp(response) {\n  let place = document.querySelector(\"#replace\");\n  let city = response.data.name;\n  let tempNumber = document.querySelector(\".degrees\");\n  let temp = Math.round(response.data.main.temp);\n  tempNumber.innerHTML = `${temp}°`;\n  place.innerHTML = city;\n}\n\n//get myLocation\nfunction showCoordinates(position) {\n  let lat = position.coords.latitude;\n  let lon = position.coords.longitude;\n  let apiKey = \"29db418d254189011335f04392e3dfc8\";\n  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;\n  console.log(lat);\n  console.log(lon);\n  axios.get(apiUrl).then(getTemp);\n}\n\nfunction navigatorr(event) {\n  event.preventDefault();\n  navigator.geolocation.getCurrentPosition(showCoordinates);\n}\n\nlet formn = document.querySelector(\"#type-city\");\nformn.addEventListener(\"submit\", enterCity);\n\nlet button = document.querySelector(\"button\");\nbutton.addEventListener(\"click\", navigatorr);\n"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":["/package.json:","/node_modules/@babel/runtime/package.json:","/node_modules/@babel/runtime/helpers/interopRequireWildcard.js:","/node_modules/@babel/runtime/helpers/interopRequireDefault.js:"],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/src/index.js","compiledCode":"\"use strict\";\n\n//Form tempterature\nfunction showFormTemp(response) {\n  var tempNumber = document.querySelector(\".degrees\");\n  var temp = Math.round(response.data.main.temp);\n  tempNumber.innerHTML = \"\".concat(temp, \"\\xB0\");\n}\nfunction enterCity(event) {\n  event.preventDefault();\n  console.log(event);\n  var cityName = document.querySelector(\"#type-city\");\n  var city = document.querySelector(\"#replace\");\n  var apiKey = \"29db418d254189011335f04392e3dfc8\";\n  var apiUrl = \"https://api.openweathermap.org/data/2.5/weather?q=\".concat(cityName.value, \"&appid=\").concat(apiKey, \"&units=metric\");\n  city.innerHTML = cityName.value;\n  axios.get(apiUrl).then(showFormTemp);\n}\nvar weekday = [\"Sunday\", \"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\"];\nvar currentTime = new Date();\nvar currentHour = currentTime.getHours();\nvar currentDay = weekday[currentTime.getDay()];\nvar currentMin = currentTime.getMinutes();\nvar textHour = document.querySelector(\"p\");\ntextHour.innerHTML = \"\".concat(currentDay, \" \").concat(currentHour, \":\").concat(currentMin);\nvar form = document.querySelector(\".city\");\nform.addEventListener(\"submit\", enterCity);\n\n//button current Location & current Weather\nfunction getTemp(response) {\n  var place = document.querySelector(\"#replace\");\n  var city = response.data.name;\n  var tempNumber = document.querySelector(\".degrees\");\n  var temp = Math.round(response.data.main.temp);\n  tempNumber.innerHTML = \"\".concat(temp, \"\\xB0\");\n  place.innerHTML = city;\n}\n\n//get myLocation\nfunction showCoordinates(position) {\n  var lat = position.coords.latitude;\n  var lon = position.coords.longitude;\n  var apiKey = \"29db418d254189011335f04392e3dfc8\";\n  var apiUrl = \"https://api.openweathermap.org/data/2.5/weather?lat=\".concat(lat, \"&lon=\").concat(lon, \"&appid=\").concat(apiKey, \"&units=metric\");\n  console.log(lat);\n  console.log(lon);\n  axios.get(apiUrl).then(getTemp);\n}\nfunction navigatorr(event) {\n  event.preventDefault();\n  navigator.geolocation.getCurrentPosition(showCoordinates);\n}\nvar formn = document.querySelector(\"#type-city\");\nformn.addEventListener(\"submit\", enterCity);\nvar button = document.querySelector(\"button\");\nbutton.addEventListener(\"click\", navigatorr);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJzaG93Rm9ybVRlbXAiLCJyZXNwb25zZSIsInRlbXBOdW1iZXIiLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJ0ZW1wIiwiTWF0aCIsInJvdW5kIiwiZGF0YSIsIm1haW4iLCJpbm5lckhUTUwiLCJlbnRlckNpdHkiLCJldmVudCIsInByZXZlbnREZWZhdWx0IiwiY29uc29sZSIsImxvZyIsImNpdHlOYW1lIiwiY2l0eSIsImFwaUtleSIsImFwaVVybCIsInZhbHVlIiwiYXhpb3MiLCJnZXQiLCJ0aGVuIiwid2Vla2RheSIsImN1cnJlbnRUaW1lIiwiRGF0ZSIsImN1cnJlbnRIb3VyIiwiZ2V0SG91cnMiLCJjdXJyZW50RGF5IiwiZ2V0RGF5IiwiY3VycmVudE1pbiIsImdldE1pbnV0ZXMiLCJ0ZXh0SG91ciIsImZvcm0iLCJhZGRFdmVudExpc3RlbmVyIiwiZ2V0VGVtcCIsInBsYWNlIiwibmFtZSIsInNob3dDb29yZGluYXRlcyIsInBvc2l0aW9uIiwibGF0IiwiY29vcmRzIiwibGF0aXR1ZGUiLCJsb24iLCJsb25naXR1ZGUiLCJuYXZpZ2F0b3JyIiwibmF2aWdhdG9yIiwiZ2VvbG9jYXRpb24iLCJnZXRDdXJyZW50UG9zaXRpb24iLCJmb3JtbiIsImJ1dHRvbiJdLCJzb3VyY2VzIjpbIi9zcmMvaW5kZXguanMiXSwic291cmNlc0NvbnRlbnQiOlsiLy9Gb3JtIHRlbXB0ZXJhdHVyZVxuZnVuY3Rpb24gc2hvd0Zvcm1UZW1wKHJlc3BvbnNlKSB7XG4gIGxldCB0ZW1wTnVtYmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5kZWdyZWVzXCIpO1xuICBsZXQgdGVtcCA9IE1hdGgucm91bmQocmVzcG9uc2UuZGF0YS5tYWluLnRlbXApO1xuICB0ZW1wTnVtYmVyLmlubmVySFRNTCA9IGAke3RlbXB9wrBgO1xufVxuXG5mdW5jdGlvbiBlbnRlckNpdHkoZXZlbnQpIHtcbiAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcbiAgY29uc29sZS5sb2coZXZlbnQpO1xuICBsZXQgY2l0eU5hbWUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiI3R5cGUtY2l0eVwiKTtcbiAgbGV0IGNpdHkgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiI3JlcGxhY2VcIik7XG4gIGxldCBhcGlLZXkgPSBcIjI5ZGI0MThkMjU0MTg5MDExMzM1ZjA0MzkyZTNkZmM4XCI7XG4gIGxldCBhcGlVcmwgPSBgaHR0cHM6Ly9hcGkub3BlbndlYXRoZXJtYXAub3JnL2RhdGEvMi41L3dlYXRoZXI/cT0ke2NpdHlOYW1lLnZhbHVlfSZhcHBpZD0ke2FwaUtleX0mdW5pdHM9bWV0cmljYDtcbiAgY2l0eS5pbm5lckhUTUwgPSBjaXR5TmFtZS52YWx1ZTtcbiAgYXhpb3MuZ2V0KGFwaVVybCkudGhlbihzaG93Rm9ybVRlbXApO1xufVxubGV0IHdlZWtkYXkgPSBbXG4gIFwiU3VuZGF5XCIsXG4gIFwiTW9uZGF5XCIsXG4gIFwiVHVlc2RheVwiLFxuICBcIldlZG5lc2RheVwiLFxuICBcIlRodXJzZGF5XCIsXG4gIFwiRnJpZGF5XCIsXG4gIFwiU2F0dXJkYXlcIlxuXTtcbmxldCBjdXJyZW50VGltZSA9IG5ldyBEYXRlKCk7XG5sZXQgY3VycmVudEhvdXIgPSBjdXJyZW50VGltZS5nZXRIb3VycygpO1xubGV0IGN1cnJlbnREYXkgPSB3ZWVrZGF5W2N1cnJlbnRUaW1lLmdldERheSgpXTtcbmxldCBjdXJyZW50TWluID0gY3VycmVudFRpbWUuZ2V0TWludXRlcygpO1xubGV0IHRleHRIb3VyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcInBcIik7XG50ZXh0SG91ci5pbm5lckhUTUwgPSBgJHtjdXJyZW50RGF5fSAke2N1cnJlbnRIb3VyfToke2N1cnJlbnRNaW59YDtcbmxldCBmb3JtID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5jaXR5XCIpO1xuZm9ybS5hZGRFdmVudExpc3RlbmVyKFwic3VibWl0XCIsIGVudGVyQ2l0eSk7XG5cbi8vYnV0dG9uIGN1cnJlbnQgTG9jYXRpb24gJiBjdXJyZW50IFdlYXRoZXJcbmZ1bmN0aW9uIGdldFRlbXAocmVzcG9uc2UpIHtcbiAgbGV0IHBsYWNlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIiNyZXBsYWNlXCIpO1xuICBsZXQgY2l0eSA9IHJlc3BvbnNlLmRhdGEubmFtZTtcbiAgbGV0IHRlbXBOdW1iZXIgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmRlZ3JlZXNcIik7XG4gIGxldCB0ZW1wID0gTWF0aC5yb3VuZChyZXNwb25zZS5kYXRhLm1haW4udGVtcCk7XG4gIHRlbXBOdW1iZXIuaW5uZXJIVE1MID0gYCR7dGVtcH3CsGA7XG4gIHBsYWNlLmlubmVySFRNTCA9IGNpdHk7XG59XG5cbi8vZ2V0IG15TG9jYXRpb25cbmZ1bmN0aW9uIHNob3dDb29yZGluYXRlcyhwb3NpdGlvbikge1xuICBsZXQgbGF0ID0gcG9zaXRpb24uY29vcmRzLmxhdGl0dWRlO1xuICBsZXQgbG9uID0gcG9zaXRpb24uY29vcmRzLmxvbmdpdHVkZTtcbiAgbGV0IGFwaUtleSA9IFwiMjlkYjQxOGQyNTQxODkwMTEzMzVmMDQzOTJlM2RmYzhcIjtcbiAgbGV0IGFwaVVybCA9IGBodHRwczovL2FwaS5vcGVud2VhdGhlcm1hcC5vcmcvZGF0YS8yLjUvd2VhdGhlcj9sYXQ9JHtsYXR9Jmxvbj0ke2xvbn0mYXBwaWQ9JHthcGlLZXl9JnVuaXRzPW1ldHJpY2A7XG4gIGNvbnNvbGUubG9nKGxhdCk7XG4gIGNvbnNvbGUubG9nKGxvbik7XG4gIGF4aW9zLmdldChhcGlVcmwpLnRoZW4oZ2V0VGVtcCk7XG59XG5cbmZ1bmN0aW9uIG5hdmlnYXRvcnIoZXZlbnQpIHtcbiAgZXZlbnQucHJldmVudERlZmF1bHQoKTtcbiAgbmF2aWdhdG9yLmdlb2xvY2F0aW9uLmdldEN1cnJlbnRQb3NpdGlvbihzaG93Q29vcmRpbmF0ZXMpO1xufVxuXG5sZXQgZm9ybW4gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiI3R5cGUtY2l0eVwiKTtcbmZvcm1uLmFkZEV2ZW50TGlzdGVuZXIoXCJzdWJtaXRcIiwgZW50ZXJDaXR5KTtcblxubGV0IGJ1dHRvbiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCJidXR0b25cIik7XG5idXR0b24uYWRkRXZlbnRMaXN0ZW5lcihcImNsaWNrXCIsIG5hdmlnYXRvcnIpO1xuIl0sIm1hcHBpbmdzIjoiOztBQUFBO0FBQ0EsU0FBU0EsWUFBWSxDQUFDQyxRQUFRLEVBQUU7RUFDOUIsSUFBSUMsVUFBVSxHQUFHQyxRQUFRLENBQUNDLGFBQWEsQ0FBQyxVQUFVLENBQUM7RUFDbkQsSUFBSUMsSUFBSSxHQUFHQyxJQUFJLENBQUNDLEtBQUssQ0FBQ04sUUFBUSxDQUFDTyxJQUFJLENBQUNDLElBQUksQ0FBQ0osSUFBSSxDQUFDO0VBQzlDSCxVQUFVLENBQUNRLFNBQVMsYUFBTUwsSUFBSSxTQUFHO0FBQ25DO0FBRUEsU0FBU00sU0FBUyxDQUFDQyxLQUFLLEVBQUU7RUFDeEJBLEtBQUssQ0FBQ0MsY0FBYyxFQUFFO0VBQ3RCQyxPQUFPLENBQUNDLEdBQUcsQ0FBQ0gsS0FBSyxDQUFDO0VBQ2xCLElBQUlJLFFBQVEsR0FBR2IsUUFBUSxDQUFDQyxhQUFhLENBQUMsWUFBWSxDQUFDO0VBQ25ELElBQUlhLElBQUksR0FBR2QsUUFBUSxDQUFDQyxhQUFhLENBQUMsVUFBVSxDQUFDO0VBQzdDLElBQUljLE1BQU0sR0FBRyxrQ0FBa0M7RUFDL0MsSUFBSUMsTUFBTSwrREFBd0RILFFBQVEsQ0FBQ0ksS0FBSyxvQkFBVUYsTUFBTSxrQkFBZTtFQUMvR0QsSUFBSSxDQUFDUCxTQUFTLEdBQUdNLFFBQVEsQ0FBQ0ksS0FBSztFQUMvQkMsS0FBSyxDQUFDQyxHQUFHLENBQUNILE1BQU0sQ0FBQyxDQUFDSSxJQUFJLENBQUN2QixZQUFZLENBQUM7QUFDdEM7QUFDQSxJQUFJd0IsT0FBTyxHQUFHLENBQ1osUUFBUSxFQUNSLFFBQVEsRUFDUixTQUFTLEVBQ1QsV0FBVyxFQUNYLFVBQVUsRUFDVixRQUFRLEVBQ1IsVUFBVSxDQUNYO0FBQ0QsSUFBSUMsV0FBVyxHQUFHLElBQUlDLElBQUksRUFBRTtBQUM1QixJQUFJQyxXQUFXLEdBQUdGLFdBQVcsQ0FBQ0csUUFBUSxFQUFFO0FBQ3hDLElBQUlDLFVBQVUsR0FBR0wsT0FBTyxDQUFDQyxXQUFXLENBQUNLLE1BQU0sRUFBRSxDQUFDO0FBQzlDLElBQUlDLFVBQVUsR0FBR04sV0FBVyxDQUFDTyxVQUFVLEVBQUU7QUFDekMsSUFBSUMsUUFBUSxHQUFHOUIsUUFBUSxDQUFDQyxhQUFhLENBQUMsR0FBRyxDQUFDO0FBQzFDNkIsUUFBUSxDQUFDdkIsU0FBUyxhQUFNbUIsVUFBVSxjQUFJRixXQUFXLGNBQUlJLFVBQVUsQ0FBRTtBQUNqRSxJQUFJRyxJQUFJLEdBQUcvQixRQUFRLENBQUNDLGFBQWEsQ0FBQyxPQUFPLENBQUM7QUFDMUM4QixJQUFJLENBQUNDLGdCQUFnQixDQUFDLFFBQVEsRUFBRXhCLFNBQVMsQ0FBQzs7QUFFMUM7QUFDQSxTQUFTeUIsT0FBTyxDQUFDbkMsUUFBUSxFQUFFO0VBQ3pCLElBQUlvQyxLQUFLLEdBQUdsQyxRQUFRLENBQUNDLGFBQWEsQ0FBQyxVQUFVLENBQUM7RUFDOUMsSUFBSWEsSUFBSSxHQUFHaEIsUUFBUSxDQUFDTyxJQUFJLENBQUM4QixJQUFJO0VBQzdCLElBQUlwQyxVQUFVLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBYSxDQUFDLFVBQVUsQ0FBQztFQUNuRCxJQUFJQyxJQUFJLEdBQUdDLElBQUksQ0FBQ0MsS0FBSyxDQUFDTixRQUFRLENBQUNPLElBQUksQ0FBQ0MsSUFBSSxDQUFDSixJQUFJLENBQUM7RUFDOUNILFVBQVUsQ0FBQ1EsU0FBUyxhQUFNTCxJQUFJLFNBQUc7RUFDakNnQyxLQUFLLENBQUMzQixTQUFTLEdBQUdPLElBQUk7QUFDeEI7O0FBRUE7QUFDQSxTQUFTc0IsZUFBZSxDQUFDQyxRQUFRLEVBQUU7RUFDakMsSUFBSUMsR0FBRyxHQUFHRCxRQUFRLENBQUNFLE1BQU0sQ0FBQ0MsUUFBUTtFQUNsQyxJQUFJQyxHQUFHLEdBQUdKLFFBQVEsQ0FBQ0UsTUFBTSxDQUFDRyxTQUFTO0VBQ25DLElBQUkzQixNQUFNLEdBQUcsa0NBQWtDO0VBQy9DLElBQUlDLE1BQU0saUVBQTBEc0IsR0FBRyxrQkFBUUcsR0FBRyxvQkFBVTFCLE1BQU0sa0JBQWU7RUFDakhKLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDMEIsR0FBRyxDQUFDO0VBQ2hCM0IsT0FBTyxDQUFDQyxHQUFHLENBQUM2QixHQUFHLENBQUM7RUFDaEJ2QixLQUFLLENBQUNDLEdBQUcsQ0FBQ0gsTUFBTSxDQUFDLENBQUNJLElBQUksQ0FBQ2EsT0FBTyxDQUFDO0FBQ2pDO0FBRUEsU0FBU1UsVUFBVSxDQUFDbEMsS0FBSyxFQUFFO0VBQ3pCQSxLQUFLLENBQUNDLGNBQWMsRUFBRTtFQUN0QmtDLFNBQVMsQ0FBQ0MsV0FBVyxDQUFDQyxrQkFBa0IsQ0FBQ1YsZUFBZSxDQUFDO0FBQzNEO0FBRUEsSUFBSVcsS0FBSyxHQUFHL0MsUUFBUSxDQUFDQyxhQUFhLENBQUMsWUFBWSxDQUFDO0FBQ2hEOEMsS0FBSyxDQUFDZixnQkFBZ0IsQ0FBQyxRQUFRLEVBQUV4QixTQUFTLENBQUM7QUFFM0MsSUFBSXdDLE1BQU0sR0FBR2hELFFBQVEsQ0FBQ0MsYUFBYSxDQUFDLFFBQVEsQ0FBQztBQUM3QytDLE1BQU0sQ0FBQ2hCLGdCQUFnQixDQUFDLE9BQU8sRUFBRVcsVUFBVSxDQUFDIn0=","sourceEqualsCompiled":false}},"/src/styles.css:":{"query":"","module":{"path":"/src/styles.css","code":"body {\n  display: block;\n  max-width: 400px;\n  margin-top: 60px;\n  margin-right: 700px;\n  margin-left: auto;\n}\np {\n  color: black;\n  font-size: 20px;\n  font-weight: bolder;\n}\nbutton {\n  position: relative;\n  display: block;\n  right: -260px;\n  top: -70px;\n  display: block;\n  cursor: pointer;\n  color: rgb(4, 0, 255);\n  background-color: rgb(249, 249, 249);\n  border: 5px solid whitesmoke;\n  border-radius: 30px 30px;\n  transition: all 0.2 ease-in;\n}\nbutton:hover {\n  border: 5px solid whitesmoke;\n  color: rgb(14, 207, 255);\n}\n.sun {\n  position: relative;\n  top: -190px;\n  right: -490px;\n  font-size: 120px;\n  margin: -100px 0px 0px auto;\n}\n.box {\n  display: block;\n  background: white;\n  width: 700px;\n  padding: 10px;\n  border: 4px;\n  border-radius: 40px;\n  border-width: 4%;\n  box-shadow: 5px 5px 10px 10px rgb(250, 250, 250);\n}\n\n.typeName {\n  display: block;\n  margin: 10px 10px;\n  display: block;\n  border-radius: 5px;\n}\n.magnify {\n  position: relative;\n  display: block;\n  right: -210px;\n  top: -40px;\n  border-radius: 5px;\n  transition: all 1s ease-out;\n}\n.magnify:hover {\n  background-color: white;\n}\n.city {\n  margin: 0px;\n  padding: 0 auto;\n  border: 0 auto;\n}\n.placetemp {\n  font-size: 50px;\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: bold;\n  height: 20px;\n  padding-top: 0 auto;\n  margin: 0 auto;\n}\n.celsus {\n  font-size: 40px;\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: bold;\n}\na:link {\n  text-decoration: none;\n}\na:hover {\n  color: orangered;\n}\n.celsus:hover {\n  color: rgb(14, 247, 255);\n}\n.degrees {\n  font-size: 40px;\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: bold;\n  height: 20px;\n}\n.row {\n  padding: 0 auto;\n  line-height: 35px;\n  max-height: 20px;\n  margin: auto;\n}\n\n.col-sm-1 {\n  position: relative;\n  right: -10px;\n  top: -90px;\n  text-align: center;\n  font-family: \"Montserrat\", sans-serif;\n  font-weight: lighter;\n  font-size: 20px;\n  margin: 0 auto;\n  padding: 0px auto;\n  border-radius: 10px;\n}\n\n.mj {\n  color: grey;\n  text-align: left;\n  font-size: 8px;\n  margin: 0 auto;\n  padding: 10px;\n}\n"},"isEntry":true,"isTestFile":false,"sourceEqualsCompiled":false,"childModules":[],"dependencies":[],"initiators":["/index.html:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":{"fileName":"/src/styles.css","compiledCode":"\nfunction createStyleNode(id, content) {\n  var styleNode =\n    document.getElementById(id) || document.createElement('style');\n\n  styleNode.setAttribute('id', id);\n  styleNode.type = 'text/css';\n  if (styleNode.styleSheet) {\n    styleNode.styleSheet.cssText = content;\n  } else {\n    styleNode.innerHTML = '';\n    styleNode.appendChild(document.createTextNode(content));\n  }\n  document.head.appendChild(styleNode);\n}\n\ncreateStyleNode(\n  \"/src/styles.css:-css\",\n  \"body {\\n  display: block;\\n  max-width: 400px;\\n  margin-top: 60px;\\n  margin-right: 700px;\\n  margin-left: auto;\\n}\\np {\\n  color: black;\\n  font-size: 20px;\\n  font-weight: bolder;\\n}\\nbutton {\\n  position: relative;\\n  display: block;\\n  right: -260px;\\n  top: -70px;\\n  display: block;\\n  cursor: pointer;\\n  color: rgb(4, 0, 255);\\n  background-color: rgb(249, 249, 249);\\n  border: 5px solid whitesmoke;\\n  border-radius: 30px 30px;\\n  transition: all 0.2 ease-in;\\n}\\nbutton:hover {\\n  border: 5px solid whitesmoke;\\n  color: rgb(14, 207, 255);\\n}\\n.sun {\\n  position: relative;\\n  top: -190px;\\n  right: -490px;\\n  font-size: 120px;\\n  margin: -100px 0px 0px auto;\\n}\\n.box {\\n  display: block;\\n  background: white;\\n  width: 700px;\\n  padding: 10px;\\n  border: 4px;\\n  border-radius: 40px;\\n  border-width: 4%;\\n  box-shadow: 5px 5px 10px 10px rgb(250, 250, 250);\\n}\\n\\n.typeName {\\n  display: block;\\n  margin: 10px 10px;\\n  display: block;\\n  border-radius: 5px;\\n}\\n.magnify {\\n  position: relative;\\n  display: block;\\n  right: -210px;\\n  top: -40px;\\n  border-radius: 5px;\\n  transition: all 1s ease-out;\\n}\\n.magnify:hover {\\n  background-color: white;\\n}\\n.city {\\n  margin: 0px;\\n  padding: 0 auto;\\n  border: 0 auto;\\n}\\n.placetemp {\\n  font-size: 50px;\\n  font-family: \\\"Montserrat\\\", sans-serif;\\n  font-weight: bold;\\n  height: 20px;\\n  padding-top: 0 auto;\\n  margin: 0 auto;\\n}\\n.celsus {\\n  font-size: 40px;\\n  font-family: \\\"Montserrat\\\", sans-serif;\\n  font-weight: bold;\\n}\\na:link {\\n  text-decoration: none;\\n}\\na:hover {\\n  color: orangered;\\n}\\n.celsus:hover {\\n  color: rgb(14, 247, 255);\\n}\\n.degrees {\\n  font-size: 40px;\\n  font-family: \\\"Montserrat\\\", sans-serif;\\n  font-weight: bold;\\n  height: 20px;\\n}\\n.row {\\n  padding: 0 auto;\\n  line-height: 35px;\\n  max-height: 20px;\\n  margin: auto;\\n}\\n\\n.col-sm-1 {\\n  position: relative;\\n  right: -10px;\\n  top: -90px;\\n  text-align: center;\\n  font-family: \\\"Montserrat\\\", sans-serif;\\n  font-weight: lighter;\\n  font-size: 20px;\\n  margin: 0 auto;\\n  padding: 0px auto;\\n  border-radius: 10px;\\n}\\n\\n.mj {\\n  color: grey;\\n  text-align: left;\\n  font-size: 8px;\\n  margin: 0 auto;\\n  padding: 10px;\\n}\\n\"\n);\n\n\n","sourceEqualsCompiled":false}},"/node_modules/@babel/runtime/helpers/interopRequireWildcard.js:":{"query":"","module":{"path":"/node_modules/@babel/runtime/helpers/interopRequireWildcard.js","code":"var _typeof = require(\"./typeof.js\")[\"default\"];\nfunction _getRequireWildcardCache(nodeInterop) {\n  if (typeof WeakMap !== \"function\") return null;\n  var cacheBabelInterop = new WeakMap();\n  var cacheNodeInterop = new WeakMap();\n  return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) {\n    return nodeInterop ? cacheNodeInterop : cacheBabelInterop;\n  })(nodeInterop);\n}\nfunction _interopRequireWildcard(obj, nodeInterop) {\n  if (!nodeInterop && obj && obj.__esModule) {\n    return obj;\n  }\n  if (obj === null || _typeof(obj) !== \"object\" && typeof obj !== \"function\") {\n    return {\n      \"default\": obj\n    };\n  }\n  var cache = _getRequireWildcardCache(nodeInterop);\n  if (cache && cache.has(obj)) {\n    return cache.get(obj);\n  }\n  var newObj = {};\n  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;\n  for (var key in obj) {\n    if (key !== \"default\" && Object.prototype.hasOwnProperty.call(obj, key)) {\n      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;\n      if (desc && (desc.get || desc.set)) {\n        Object.defineProperty(newObj, key, desc);\n      } else {\n        newObj[key] = obj[key];\n      }\n    }\n  }\n  newObj[\"default\"] = obj;\n  if (cache) {\n    cache.set(obj, newObj);\n  }\n  return newObj;\n}\nmodule.exports = _interopRequireWildcard, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;","downloaded":true},"isEntry":false,"isTestFile":false,"sourceEqualsCompiled":true,"childModules":[],"dependencies":["/node_modules/@babel/runtime/package.json:","/node_modules/@babel/runtime/helpers/typeof.js:"],"initiators":["/src/index.js:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":null},"/node_modules/@babel/runtime/helpers/interopRequireDefault.js:":{"query":"","module":{"path":"/node_modules/@babel/runtime/helpers/interopRequireDefault.js","code":"function _interopRequireDefault(obj) {\n  return obj && obj.__esModule ? obj : {\n    \"default\": obj\n  };\n}\nmodule.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;","downloaded":true},"isEntry":false,"isTestFile":false,"sourceEqualsCompiled":true,"childModules":[],"dependencies":[],"initiators":["/src/index.js:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":null},"/node_modules/@babel/runtime/helpers/typeof.js:":{"query":"","module":{"path":"/node_modules/@babel/runtime/helpers/typeof.js","code":"function _typeof(obj) {\n  \"@babel/helpers - typeof\";\n\n  return (module.exports = _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) {\n    return typeof obj;\n  } : function (obj) {\n    return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj;\n  }, module.exports.__esModule = true, module.exports[\"default\"] = module.exports), _typeof(obj);\n}\nmodule.exports = _typeof, module.exports.__esModule = true, module.exports[\"default\"] = module.exports;","downloaded":true},"isEntry":false,"isTestFile":false,"sourceEqualsCompiled":true,"childModules":[],"dependencies":[],"initiators":["/node_modules/@babel/runtime/helpers/interopRequireWildcard.js:"],"transpilationDependencies":[],"transpilationInitiators":[],"asyncDependencies":[],"warnings":[],"hasMissingDependencies":false,"source":null}},"cachedPaths":{"/":{"./src/styles.css":"/src/styles.css","./src/index.js":"/src/index.js"}},"version":"https://codesandbox.io/static/js/sandbox.ee921c4dc.js","timestamp":1679839239065,"configurations":{"package":{"path":"/package.json","code":"{\n  \"name\": \"marianas-project-weatherapp\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.html\",\n  \"scripts\": {\n    \"start\": \"parcel index.html --open\",\n    \"build\": \"parcel build index.html\"\n  },\n  \"dependencies\": {},\n  \"devDependencies\": {\n    \"@babel/core\": \"7.2.0\",\n    \"parcel-bundler\": \"^1.6.1\"\n  },\n  \"keywords\": []\n}","generated":false,"parsed":{"name":"marianas-project-weatherapp","version":"1.0.0","description":"","main":"index.html","scripts":{"start":"parcel index.html --open","build":"parcel build index.html"},"dependencies":{},"devDependencies":{"@babel/core":"7.2.0","parcel-bundler":"^1.6.1"},"keywords":[]}},"sandbox":{"path":"/sandbox.config.json","code":"{\n  \"infiniteLoopProtection\": true,\n  \"hardReloadOnChange\": false,\n  \"view\": \"browser\"\n}","generated":true,"parsed":{"infiniteLoopProtection":true,"hardReloadOnChange":false,"view":"browser"}},"now":{"path":"/vercel.json","code":"{}","generated":true,"parsed":{}},"babel":{"path":"/.babelrc","code":"{\n  \"presets\": [\n    \"env\"\n  ],\n  \"plugins\": [\n    \"transform-runtime\"\n  ],\n  \"parserOpts\": {\n    \"plugins\": [\n      \"dynamicImport\"\n    ]\n  }\n}","generated":true,"parsed":{"presets":["env"],"plugins":["transform-runtime"],"parserOpts":{"plugins":["dynamicImport"]}}},"typescript":{"path":"/tsconfig.json","code":"{\n  \"compilerOptions\": {\n    \"module\": \"commonjs\",\n    \"jsx\": \"preserve\",\n    \"esModuleInterop\": true,\n    \"sourceMap\": true,\n    \"allowJs\": true,\n    \"lib\": [\n      \"es6\",\n      \"dom\"\n    ],\n    \"rootDir\": \"src\",\n    \"moduleResolution\": \"node\"\n  }\n}","generated":true,"parsed":{"compilerOptions":{"module":"commonjs","jsx":"preserve","esModuleInterop":true,"sourceMap":true,"allowJs":true,"lib":["es6","dom"],"rootDir":"src","moduleResolution":"node"}}}},"entry":"/index.html","meta":{},"dependenciesQuery":"%40babel%2Fruntime%407.21.0+node-libs-browser%402.2.1"},
+  latestSha: "9747C124180FC5CCE84177A5070238DAC414CA581163CB95FF7F23B2DEEE6A6D",
+  version: "https://codesandbox.io/static/js/sandbox.ee921c4dc.js"
+};
+
+</script>
+  <script crossorigin="" type="text/javascript" src="./WeatherPlus5_files/watermark-button.f4f9aed52.js.download"></script>
+  
+
+
+<iframe id="sb__open-sandbox67" style="
+      position: fixed;
+      margin: 0;
+      padding: 0;
+      bottom: 16px;
+      right: 16px;
+      border: none;
+      width: 118px;
+      height: 36px;
+      z-index: 9999999999999;
+    " src="./WeatherPlus5_files/saved_resource.html"></iframe></body></html>
