@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <title>WeatherPlus6</title>
+    <link href="src/styles.css"></style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <div class="box">
+    <form class="city" >
+      <input type="text" class="typeName" id = "type-city" placeholder="Type your city" autofocus="on" />
+      <input type="submit" class="magnify" id="search" value="🔎" />
+    </form>
+    <button>Current Temp</button>
+    <span class="placetemp" id="replace">
+      Brazil - São Paulo </span><br />
+      <span class="degrees"> 28°</span>
+        <span class="celsus"> 
+          <a href=""  id ="ce"> C </a>  </span>
+          <p>Friday 24/02/2023</p>
+          <hr/>
+      <p class="sun">☀️</p>
+    <div class="weekdays">
+      <div class="row">
+        <div class="col-sm-1">
+          <strong> Sat</strong> <br />
+          ☀️<br />
+          <strong>34°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Sun </strong> <br />
+          ☀️<br />
+          <strong>36°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Mon</strong> <br />
+          ☀️<br />
+          <strong>38°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Tue</strong> <br />
+          🌦️<br />
+          <strong>27°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Wed</strong> <br />
+          🌥️<br />
+          <strong>23°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Thu</strong> <br />
+          🌤️<br />
+          <strong>25°</strong>
+        </div>
+        <div class="col-sm-1">
+          <strong> Fri </strong> <br />
+          ☀️<br />
+          <strong>28°</strong>
+        </div>
+      </div>
+    </div>
+    <p class="mj"><em>Coded by Mariana Jennings</em></p>
+  </div>
+  <script src="src/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+  display: block;
+  max-width: 400px;
+  margin-top: 60px;
+  margin-right: 700px;
+  margin-left: auto;
+}
+p {
+  color: black;
+  font-size: 20px;
+  font-weight: bolder;
+}
+button {
+  position: relative;
+  display: block;
+  right: -260px;
+  top: -70px;
+  display: block;
+  cursor: pointer;
+  color: rgb(0, 26, 255);
+  background-color: rgb(249, 249, 249);
+  border: 5px solid whitesmoke;
+  border-radius: 30px 30px;
+  transition: all 0.2 ease-in;
+}
+button:hover {
+  border: 5px solid whitesmoke;
+  color: rgb(14, 207, 255);
+}
+.sun {
+  position: relative;
+  top: -190px;
+  right: -490px;
+  font-size: 120px;
+  margin: -100px 0px 0px auto;
+}
+.box {
+  display: block;
+  background: white;
+  width: 700px;
+  padding: 10px;
+  border: 4px;
+  border-radius: 40px;
+  border-width: 4%;
+  box-shadow: 5px 5px 10px 10px rgb(250, 250, 250);
+}
+
+.typeName {
+  display: block;
+  margin: 10px 10px;
+  display: block;
+  border-radius: 5px;
+}
+.magnify {
+  position: relative;
+  display: block;
+  right: -210px;
+  top: -40px;
+  border-radius: 5px;
+  transition: all 1s ease-out;
+}
+.magnify:hover {
+  background-color: white;
+}
+.city {
+  margin: 0px;
+  padding: 0 auto;
+  border: 0 auto;
+}
+.placetemp {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  height: 20px;
+  padding-top: 0 auto;
+  margin: 0 auto;
+}
+.celsus {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  color: orangered;
+}
+.celsus:hover {
+  color: rgb(14, 247, 255);
+}
+.degrees {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  height: 20px;
+}
+.row {
+  padding: 0 auto;
+  line-height: 35px;
+  max-height: 20px;
+  margin: auto;
+}
+
+.col-sm-1 {
+  position: relative;
+  right: -10px;
+  top: -90px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 0 auto;
+  padding: 0px auto;
+  border-radius: 10px;
+}
+
+.mj {
+  color: grey;
+  text-align: left;
+  font-size: 8px;
+  margin: 0 auto;
+  padding: 10px;
+}
