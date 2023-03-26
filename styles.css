@@ -1,9 +1,6 @@
 body {
-  display: block;
+  display: center;
   max-width: 400px;
-  margin-top: 60px;
-  margin-right: 700px;
-  margin-left: auto;
 }
 p {
   color: black;
@@ -35,6 +32,8 @@ button:hover {
   margin: -100px 0px 0px auto;
 }
 .box {
+  margin: 400px;
+  margin-top: 60px;
   display: block;
   background: white;
   width: 700px;
