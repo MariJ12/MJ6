@@ -31,13 +31,15 @@ button:hover {
   font-size: 120px;
   margin: -100px 0px 0px auto;
 }
-.box {
+.frame {
+  width: 700px;
+  padding: 10px;
   margin: 500px;
   margin-top: 60px;
   display: block;
   background: white;
-  width: 700px;
-  padding: 10px;
+}
+.box {
   border: 4px;
   border-radius: 40px;
   border-width: 4%;
